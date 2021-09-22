@@ -90,7 +90,7 @@ class Crono():
 	def start(self):
 
 		self.countRunning = True
-		print "countdown starts"
+		print("countdown starts")
 
 class CursorPos():
 

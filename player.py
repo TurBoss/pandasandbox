@@ -97,15 +97,15 @@ class Player():
 							} for name in parts
 						}
 
-		for itemClass, items in self.game.items["items"].iteritems():
+		for itemClass, items in self.game.items["items"].items():
 			if itemClass == "armours":
-				for itemType, value in items["lightarmours"].iteritems():
+				for itemType, value in items["lightarmours"].items():
 					modelName = value["model"]
 
-				for itemType, value in items["midarmours"].iteritems():
+				for itemType, value in items["midarmours"].items():
 					modelName = value["model"]
 
-				for itemType, value in items["heavyarmours"].iteritems():
+				for itemType, value in items["heavyarmours"].items():
 					modelName = value["model"]
 
 					models["torso-%s" % modelName] = "models/hero/torso-%s" % modelName
@@ -118,7 +118,7 @@ class Player():
 															"slash-front":"models/hero/torso-%s-slash-front" % modelName
 														}
 
-				for itemType, value in items["helmets"].iteritems():
+				for itemType, value in items["helmets"].items():
 					modelName = value["model"]
 
 					models["head-%s" % modelName] = "models/hero/head-%s" % modelName
@@ -141,19 +141,19 @@ class Player():
 
 		# Hide All Player Parts
 
-		for itemClass, items in self.game.items["items"].iteritems():
+		for itemClass, items in self.game.items["items"].items():
 			if itemClass == "armours":
-				for itemType, value in items["lightarmours"].iteritems():
+				for itemType, value in items["lightarmours"].items():
 					modelName = value["model"]
 
-				for itemType, value in items["midarmours"].iteritems():
+				for itemType, value in items["midarmours"].items():
 					modelName = value["model"]
 
-				for itemType, value in items["heavyarmours"].iteritems():
+				for itemType, value in items["heavyarmours"].items():
 					modelName = value["model"]
 					self.playerActor.hidePart("torso-%s" % modelName)
 
-				for itemType, value in items["helmets"].iteritems():
+				for itemType, value in items["helmets"].items():
 					modelName = value["model"]
 					self.playerActor.hidePart("head-%s" % modelName)
 
